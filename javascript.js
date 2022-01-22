@@ -1,3 +1,5 @@
+//fs모듈
+
 // node.js의 file system 모듈을 불러온다.
 const fs = require('fs'); 
 
@@ -10,3 +12,24 @@ const inputData1 = fs.readFileSync('/dev/stdin').toString().split(' ');
 
 // options으로 인코딩을 string 자료형으로 넘기는 경우, toString을 할 필요없이 문자열 반환
 const inputData2 = fs.readFileSync(0, 'utf8').split(' ');
+
+
+//readline모듈
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+let input = [];
+rl.on('line', function (line) {
+  input.push(parseInt(line));
+}).on('close', function () {
+  const A = input[0];
+  const B = input[1];
+
+//정답입력//
+  
+  process.exit();
+});
