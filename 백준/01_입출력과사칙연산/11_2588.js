@@ -1,5 +1,5 @@
 const fs = require('fs');
-const inputData = fs.readFileSync('./11_2588.txt').toString().split('\n'); 
+const inputData = fs.readFileSync(__dirname + '/11_2588.txt').toString().split('\n'); 
 //예제 파일이 줄바꿈으로 되어있으니 split('\n')
 
 const A = parseInt(inputData[0]);
